@@ -1,0 +1,5 @@
+---
+# tasks file for verify_file
+- name: Verify copied files
+  become: True
+  shell: ls -ltr /tmp

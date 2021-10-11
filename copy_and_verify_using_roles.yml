@@ -1,0 +1,7 @@
+---
+- name: Ansible Roles
+  hosts: 192.168.56.6 
+  become: True
+  roles:
+    - role: first_role
+    - role: verify_file

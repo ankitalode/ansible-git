@@ -1,0 +1,14 @@
+- hosts: 192.168.56.6
+  tasks:
+    - name: Copy file
+      copy: src=test.py dest=test.py
+
+    - name: Execute script
+      command: python3 test.py
+
+    - name: Verify File
+      shell: 
+        "cat /tmp/test_from_python"
+      register: catcmd
+      tags: catcmd
+    - debug: msg="{{catcmd.stdout}}"
