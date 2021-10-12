@@ -1,0 +1,2 @@
+ ansible-playbook copy_and_execute.yml -i inventory.yml -v --vault-password-file vault_pass -v
+ ansible-playbook copy_and_verify_using_roles.yml -i inventory.yml -v --vault-password-file vault_pass -v
